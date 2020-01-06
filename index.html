@@ -5,8 +5,61 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>D Chat</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel= "stylesheet" href="scripts/style.css" >
 </head>
-<body>
+<body class= "bg-dark">
+<!-- container & title -->
+<div class="head text-center bg-warning">
+    <div class=" text-white display-1 py-5 "> D-CHAT</div>
+    <div class="result  lead d-none text-dark   p-1 "> <h4 class="display-5">انت<span class="display-2 text-primary">  </span>فلاح</h4></div>
+</div>
+<div class="container my-4">
+    <!-- buttons for chatrooms -->
+    <div class="chat-rooms mb-3 text-center">
+      <div class="my-2 text-warning">Choose a chatroom:</div>
+      <div class="btn-group ">
+        <button class="btn btn-warning text-light" id="general">#general</button>
+        <button class="btn btn-warning text-light" id="coding">#coding</button>
+        <button class="btn btn-warning text-light" id="gaming">#gaming</button>
+        <button class="btn btn-warning text-light" id="footbal">#football</button>
+        <button class="btn btn-warning text-light" id="music">#music</button>
+        <button class="btn btn-warning text-light" id="cinema">#cinema</button>
+      </div>
+      
+    </div>
+    <!-- chat list / window -->
+    <div class="chat-window">
+      <ul class="chat-list list-group"></ul>
+    </div>
+    <!-- new chat form -->
+    <form class="new-chat my-3">
+      <div class="input-group">
+        <div class="input-group-prepend">
+          <div class="input-group-text">Your message : </div>
+        </div>
+        <input type="text" id="message" class="form-control" required>
+        <div class="input-group-append">
+          <input type="submit" class="btn btn-warning text-light" value="S E N D">
+        </div>
+      </div>
+    </form>
+    <!-- update name form -->
+    <form class="new-name my-3">
+      <div class="input-group">
+        <div class="input-group-prepend">
+          <div class="input-group-text">Update name : </div>
+        </div>
+        <input type="text" id="name" class="form-control" required>
+        <div class="input-group-append">
+          <input type="submit" class="btn btn-warning text-light" value="UPDATE">
+        </div>
+      </div>
+      <div class="update-mssg"></div>
+    </form>
+  </div>
+
+
     <script src="scripts/app.js"></script>
     <script src="scripts/UI.js"></script>
     <script src="scripts/chat.js"></script>

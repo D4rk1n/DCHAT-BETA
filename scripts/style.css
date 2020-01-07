@@ -1,3 +1,18 @@
-.head {
+.bg-purple , .btn-purple  {
     background-color: blueviolet;
+}
+.flaot-left{
+    float: left;
+    
+    position: relative;
+    width: 80%;
+}
+.flaot-right{
+    display: inline; 
+    float: right; 
+    position:relative; 
+    width: 15%;
+}
+.container {
+    max-width: 80%;
 }

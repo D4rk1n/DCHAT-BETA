@@ -14,5 +14,3 @@ class ChatRoom {
         return await this.messages.add(message);
     }
 }
-
-console.log(cr);

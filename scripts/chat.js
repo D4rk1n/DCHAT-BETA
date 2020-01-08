@@ -13,4 +13,18 @@ class ChatRoom {
         }
         return await this.messages.add(message);
     }
+    getMessages(cb)
+    {
+        this.messages.onSnapshot(ss => {
+           ss.docChanges().forEach(c => {
+               if(c.type === 'added')
+               {
+                   cb(c.doc.data());
+               }
+           }) 
+        })
+    }
 }
+new ChatRoom("gameing" , "xXlOlXx").getMessages(data => {
+    console.log(data);
+})

@@ -15,7 +15,9 @@ class ChatRoom {
     }
     getMessages(cb)
     {
-        this.messages.onSnapshot(ss => {
+        this.messages.where('room','==',this.room)
+        .orderBy('time')
+        .onSnapshot(ss => {
            ss.docChanges().forEach(c => {
                if(c.type === 'added')
                {

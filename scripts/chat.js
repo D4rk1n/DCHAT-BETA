@@ -3,6 +3,7 @@ class ChatRoom {
         this.room = room;
         this.id = id;
         this.messages = DB.collection('messages');
+        this.listner;
     }
     async AddMessage(messagetxt) {
         var message = {
@@ -15,7 +16,7 @@ class ChatRoom {
     }
     getMessages(cb)
     {
-        this.messages.where('room','==',this.room)
+        this.listner = this.messages.where('room','==',this.room)
         .orderBy('time')
         .onSnapshot(ss => {
            ss.docChanges().forEach(c => {
@@ -26,7 +27,20 @@ class ChatRoom {
            }) 
         })
     }
+    changeID(id)
+    {
+        this.id = id;
+    }
+    changeRoom(room)
+    {
+        this.room = room;
+        if(this.listner)
+        {
+            this.listner();
+        }
+    }
 }
+
 new ChatRoom("gameing" , "xXlOlXx").getMessages(data => {
     console.log(data);
 })

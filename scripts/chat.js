@@ -41,6 +41,4 @@ class ChatRoom {
     }
 }
 
-new ChatRoom("gameing" , "xXlOlXx").getMessages(data => {
-    console.log(data);
-})
+

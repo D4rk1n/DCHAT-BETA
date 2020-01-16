@@ -1,5 +1,6 @@
 const newMessage = document.querySelector(".new-message");
 const newID = document.querySelector(".new-id");
+const update = document.querySelector(".updates");
 newMessage.addEventListener('submit',(e)=>{
     e.preventDefault();
     
@@ -10,11 +11,15 @@ newMessage.addEventListener('submit',(e)=>{
     });
    
 })
-
 newID.addEventListener('submit',e =>{
     e.preventDefault();
-    chatRoom.changeID(newID.ID.value.trim());
+    let id = newID.ID.value.trim();
+    chatRoom.changeID(id);
     newID.reset();
+    update.textContent = `YOUR ID IS UPDATED TO ${id}`;
+    setTimeout(()=>{
+        update.textContent='';
+    },3000)
 })
 
 

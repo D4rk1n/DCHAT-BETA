@@ -11,5 +11,6 @@ class UI {
         </li>
         `;
         this.chat.innerHTML+=li;
+        chat.scrollTop = chat.scrollHeight;
     }
 }

@@ -16,3 +16,9 @@
 .container {
     max-width: 80%;
 }
+.mID {
+    font-weight: bold;
+}
+.mtxt {
+    font-size: 0.9em;
+}

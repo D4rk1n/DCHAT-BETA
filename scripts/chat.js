@@ -30,6 +30,7 @@ class ChatRoom {
     changeID(id)
     {
         this.id = id;
+        localStorage.ID = id;
     }
     changeRoom(room)
     {

@@ -22,8 +22,8 @@ newID.addEventListener('submit',e =>{
     },3000)
 })
 
-
+let id = localStorage.ID ? localStorage.ID : 'USER';  
 const chat = document.querySelector('.chat-messages');
 const chatUI = new UI(chat);
-const chatRoom = new ChatRoom('gaming','user');
+const chatRoom = new ChatRoom('gaming',id);
 chatRoom.getMessages(m=>{ chatUI.view(m);})

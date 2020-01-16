@@ -1,6 +1,8 @@
 const newMessage = document.querySelector(".new-message");
+const newID = document.querySelector(".new-id");
 newMessage.addEventListener('submit',(e)=>{
     e.preventDefault();
+    
     chatRoom.AddMessage(newMessage.message.value.trim()).then(()=>{
         newMessage.reset();
     }).catch(e=>{
@@ -9,6 +11,11 @@ newMessage.addEventListener('submit',(e)=>{
    
 })
 
+newID.addEventListener('submit',e =>{
+    e.preventDefault();
+    chatRoom.changeID(newID.ID.value.trim());
+    newID.reset();
+})
 
 
 const chat = document.querySelector('.chat-messages');

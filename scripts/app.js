@@ -5,6 +5,7 @@ newMessage.addEventListener('submit',(e)=>{
     
     chatRoom.AddMessage(newMessage.message.value.trim()).then(()=>{
         newMessage.reset();
+        chat.scrollTop = chat.scrollHeight;
     }).catch(e=>{
         console.log(e);
     });

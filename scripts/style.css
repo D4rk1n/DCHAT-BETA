@@ -26,3 +26,9 @@
 .sub {
     font-size: .5em;
 }
+.list-group{
+    max-height: 300px;
+    margin-bottom: 10px;
+    overflow:scroll;
+    -webkit-overflow-scrolling: touch;
+}

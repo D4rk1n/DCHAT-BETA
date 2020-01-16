@@ -18,17 +18,22 @@
 }
 .mID {
     font-weight: bold;
+    font-size: 0.9em;
 }
 .mtxt {
-    font-size: 0.9em;
+  
     text-align: left;
+    max-block-size: 200px;
+    display: block;
 }
 .sub {
     font-size: .25em;
 }
 .list-group{
     max-height: 300px;
+    min-height: 75px;
+    background-color: white;
     margin-bottom: 10px;
-    overflow:scroll;
-    -webkit-overflow-scrolling: touch;
+    overflow-y:scroll;
+
 }

@@ -16,7 +16,7 @@ newID.addEventListener('submit',e =>{
     let id = newID.ID.value.trim();
     chatRoom.changeID(id);
     newID.reset();
-    update.textContent = `YOUR ID IS UPDATED TO ${id}`;
+    update.textContent = `YOUR ID IS UPDATED TO  ${id}`;
     setTimeout(()=>{
         update.textContent='';
     },3000)

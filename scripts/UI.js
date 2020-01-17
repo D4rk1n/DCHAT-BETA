@@ -13,8 +13,10 @@ class UI {
         this.chat.innerHTML+=li;
         chat.scrollTop = chat.scrollHeight;
     }
-    clear()
+    clear(nRoom , oRoom)
     {
+        document.getElementById(nRoom).classList.add("disabled");
+        document.getElementById(oRoom).classList.remove("disabled");
         this.chat.innerHTML='';
     }
 }

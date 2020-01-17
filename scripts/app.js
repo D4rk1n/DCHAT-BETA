@@ -3,12 +3,18 @@ const newID = document.querySelector(".new-id");
 const update = document.querySelector(".updates");
 const rooms = document.querySelector(".chat-rooms");
 const chat = document.querySelector('.chat-messages');
+console.log(rooms.children);
 rooms.addEventListener('click',e => {
     if(e.srcElement.tagName==='BUTTON')
     {
-        chatRoom.changeRoom(e.target.id);
-        chatUI.clear();
-        chatRoom.getMessages(m=>{ chatUI.view(m);})
+        if(e.target.id !== chatRoom.room)
+        {
+            chatUI.clear(e.target.id,chatRoom.room);
+            chatRoom.changeRoom(e.target.id);
+            chatRoom.getMessages(m=>{ chatUI.view(m);})            
+        }
+        else
+        e.preventDefault();
     }
     
 })

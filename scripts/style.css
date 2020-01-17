@@ -37,3 +37,7 @@
     overflow-y:scroll;
 
 }
+.mdate {
+    font-size: .6em;
+    color: gray;
+}
